@@ -1,0 +1,21 @@
+遗留问题：
+1, 数据接口 有时会有滑块验证码
+
+2，逆向获取图片接口时，时间戳需要从cookie中获取，暂时不会获取
+涉及js：
+function _0x49750c(_0x434c5e) {
+    _0xb0716d = '/wallpaper/origin/c071cdc46f0c4867a1d52d0cb51fc6d6.jpg/thumbs'
+
+    // var _0x258685 = _0x5d4bf1('number') || _0x4c930e()  // 需要从cookie获取，待破解，暂时写死
+    var _0x258685 = '1678809600'  // 2023-03-15, 当前时间为 2023-02-04
+      , _0x26a23c = CryptoJS.MD5(_0x258685) //.toString()
+      , _0xb0716d = _0x434c5e['substring'](0x15, -0x1 == _0x434c5e['lastIndexOf']('?') ? _0x434c5e['length'] : _0x434c5e['lastIndexOf']('?'))
+      , _0xfeeed2 = _0x258685 + '-' + _0x26a23c + '-0-' + CryptoJS.MD5(_0xb0716d + '-' + _0x258685 + '-' + _0x26a23c + '-0-TPV4hi7wIeM7DPv35457O8poVyUJRX0o');
+    return _0x434c5e + (_0x434c5e['indexOf']('?') < 0x0 ? '?' : '&') + 'auth_key=' + _0xfeeed2;
+}
+
+3, 时间比较久后，可能会请求不到数据，更换请求头后才可以
+头参数 chuck 需要破解
+
+https://cdn2.zzzmh.cn/wallpaper/origin/4dd06e4787714b08a2d56b5528569a67.jpg/thumbs?auth_key=1678809600-dd5af35dea6482ec398b8d3ef3e1b19d-0-654629bc92a0e17bd63abf54d2ca3176
+https://cdn2.zzzmh.cn//wallpaper/origin/4dd06e4787714b08a2d56b5528569a67.jpg/thumbs?auth_key=1678809600-dd5af35dea6482ec398b8d3ef3e1b19d-0-4791033d9328a1c52019e4d3894c86a5
