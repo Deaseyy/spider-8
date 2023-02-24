@@ -24,4 +24,4 @@ resp = requests.get(url)
 # resp = requests.get(url,headers=headers)
 print(resp.text)
 
-print(ord('p'))
+# print(ord('p'))

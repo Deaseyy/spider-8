@@ -1,15 +1,5 @@
 var CryptoJS = require('crypto-js');
 
-// r = CryptoJS.MD5('1678809600').toString()
-// console.log(r)
-// var window = global;
-// document = {}
-// ‌‌console.log(document.toString());
-// console.log(exports)
-// console.log(typeof exports)
-// console.log(typeof(typeof exports))
-
-
 // document = {}
 // // console.log(ps());
 // console.log(document.toString());
@@ -47,19 +37,36 @@ var CryptoJS = require('crypto-js');
 // ee = null
 // console.log(ee.toString());
 
+// e_data = encodeURIComponent('www.sss+/s.com/a/b')
+// console.log(e_data);
+//
+// d_data_1 = decodeURIComponent(e_data);
+// d_data_2 = unescape(e_data);
+// console.log(d_data_1);
+// console.log(d_data_2);
 
+// e_data = encodeURIComponent('1676722853381000');
+// e_data = encodeURI('1676722853381000');
+// console.log(e_data);
 
-// location = {}
-// console.log(location.toString());
+// d = {
+//     a:1,
+//     b:function () {
+//         console.log(this);
+//         return this.c
+//     },
+//     c:22
+// }
+// // console.log(d);
+// console.log(d.b());
 
-// a = {'q':111}
-// // a.b = undefined
-// console.log(a)
-// console.log(a.b)
-// console.log(a.c)
-// console.log(a.constructor)
-
-// console.log('\x70\x72\x6f\x74\x6f\x74\x79\x70\x65');
-console.log('\x70');
-console.log(0x70);
-console.log(0xf);
+function o(n) {
+    t = '',
+    // [f2, s2, d2, m2, l2, v2, p2, s2, l2, d2, h2, y2][M](function(n) {
+    ['66', '72', '6f', '6d', '43', '68', '61', '72', '43', '6f', '64', '65']['forEach'](function(n) {
+        t += unescape("%u00" + n)
+    });
+    var t, e = t;
+    return String[e](n)
+}
+o('0x36cnfreeiphone')
