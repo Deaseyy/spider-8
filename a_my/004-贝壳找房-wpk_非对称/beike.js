@@ -5478,7 +5478,7 @@ var _my;
                             } else
                                 for (d in c)
                                     _.event.remove(t, d + e[u], n, r, !0);
-                        _.isEmptyObject(c) && Q.remove(t, "handle events")
+                        _.isEmptyObject(c) && Q.remove(t, "handles events")
                     }
                 },
                 dispatch: function(t) {

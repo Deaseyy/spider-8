@@ -1,3 +1,5 @@
+""" 还原乱序验证码背景图 """
+
 import io
 from pathlib import Path
 from PIL import Image
@@ -43,10 +45,20 @@ def parse_bg_captcha(img, im_show=False, save_path=None):
     if save_path is not None:
         save_path = Path(save_path).resolve().__str__()
         new_img.save(save_path)
-    return new_img
+
+    # 创建一个字节流管道
+    img_bytes = io.BytesIO()
+    # 把PNG格式转换成的四通道转成RGB的三通道，然后再保存成jpg格式
+    image = new_img.convert("RGB")
+    # 将图片数据存入字节流管道， format可以按照具体文件的格式填写
+    image.save(img_bytes, format="JPEG")
+    # 从字节流管道中获取二进制
+    image_bytes = img_bytes.getvalue()
+    return image_bytes
 
 
-parse_bg_captcha('d401d55fc.webp', save_path='bg_parse.jpg')
+if __name__ == '__main__':
+    parse_bg_captcha('d401d55fc.webp', save_path='bg_parse.jpg')
 
 
 
