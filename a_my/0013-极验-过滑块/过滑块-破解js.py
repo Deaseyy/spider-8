@@ -10,14 +10,14 @@ def get_1():
         - challenge
         - gt
     """
-    # url = 'https://www.geetest.com/demo/gt/register-slide?t=1677050511201'
     url = 'https://www.geetest.com/demo/gt/register-slide'
     headers = {
         "user-agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Mobile Safari/537.36"
     }
-    params = {'t': '1677050511201'}
+    # params = {'t': '1677050511202'}  # 必须写活，不然返回的challenge不变，导致后面请求提示 "old challenge"
+    params = {'t': str(int(time.time() * 1000))}
     resp = requests.get(url, params=params, headers=headers)
-    print(resp.json())
+    print('req1: ', resp.json())
     # {'success': 1, 'challenge': 'f3c968c1da2e448be62ef951ff4b67f9', 'gt': '019924a82c70bb123aae90d483087f94', 'new_captcha': True}
     return resp.json()
 
@@ -26,7 +26,6 @@ def get_2(res1):
     """gettype.php
     返回一堆 js 文件
     """
-    # url = 'https://apiv6.geetest.com/gettype.php?gt=019924a82c70bb123aae90d483087f94&callback=geetest_1677050515844'
     url = 'https://apiv6.geetest.com/gettype.php'
     headers = {
         "user-agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Mobile Safari/537.36"
@@ -38,7 +37,8 @@ def get_2(res1):
         "challenge": res1['challenge'],
     }
     resp = requests.get(url=url, params=params, headers=headers)
-    print(resp.text)
+    print('req2: ', resp.text)
+
 
 
 def get_3(res1):
@@ -60,7 +60,9 @@ def get_3(res1):
         "callback": f"geetest_{int(time.time() * 1000)}"
     }
     resp = requests.get(url=url, params=params, headers=headers)
-    print(resp.text)
+    # resp.encoding = 'utf-8'
+    print('req31: ', resp.encoding)
+    print('req3: ', resp.text)
 
 
 # ==============================点击验证，有以下请求========================================================

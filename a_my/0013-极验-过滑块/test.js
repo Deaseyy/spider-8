@@ -1,3 +1,8 @@
+
+
+
+
+
 // "\u0024\u005f\u0043\u0043\u0044\u0048": function(t) {
 //     var $_CBFJo = QBLnx.$_CM
 //       , $_CBFId = ['$_CBGCG'].concat($_CBFJo)
@@ -22,6 +27,72 @@
 //     return e;
 // }
 
+function QBLnx() {}
+var rt = function() {
+    var $_BFBER = QBLnx.$_CM
+      , $_BFBDz = ['$_BFBHw'].concat($_BFBER)
+      , $_BFBFN = $_BFBDz[1];
+    $_BFBDz.shift();
+    var $_BFBGd = $_BFBDz[0];
+    function t() {
+        var $_DBEBz = QBLnx.$_Db()[9][19];
+        for (; $_DBEBz !== QBLnx.$_Db()[3][18]; ) {
+            switch ($_DBEBz) {
+            case QBLnx.$_Db()[6][19]:
+                return (65536 * (1 + Math[$_BFBER(46)]()) | 0)[$_BFBER(215)](16)[$_BFBER(430)](1);
+                break;
+            }
+        }
+    }
+    return function() {
+        var $_BFBJK = QBLnx.$_CM
+          , $_BFBIS = ['$_BFCCG'].concat($_BFBJK)
+          , $_BFCAR = $_BFBIS[1];
+        $_BFBIS.shift();
+        var $_BFCBp = $_BFBIS[0];
+        return t() + t() + t() + t();
+    }
+    ;
+}();
+
+function ne(t, e) {
+    var $_DBFEk = QBLnx.$_Db()[9][19];
+    for (; $_DBFEk !== QBLnx.$_Db()[3][17]; ) {
+        switch ($_DBFEk) {
+        case QBLnx.$_Db()[12][19]:
+            var n = this
+              , r = new re(t);
+            $_DBFEk = QBLnx.$_Db()[0][18];
+            break;
+        case QBLnx.$_Db()[3][18]:
+            r[$_CJEl(647)] && !isNaN(r[$_CJFA(647)]) && (vt = $_CJEl(663),
+            mt = r[$_CJFA(647)]),
+            r[$_CJFA(688)] && (r[$_CJEl(40)] = $_CJEl(635)),
+            t[$_CJEl(698)] && r[$_CJEl(654)](t[$_CJFA(698)]),
+            n[$_CJEl(69)] = r,
+            n[$_CJFA(49)] = t,
+            n[$_CJFA(617)] = new J(n),
+            n[$_CJFA(476)] = new Z(function(t, e) {
+                var $_BJCJN = QBLnx.$_CM
+                  , $_BJCII = ['$_BJDCE'].concat($_BJCJN)
+                  , $_BJDAE = $_BJCII[1];
+                $_BJCII.shift();
+                var $_BJDBb = $_BJCII[0];
+                n[$_BJDAE(604)](t, e);
+            }
+            ),
+            n[$_CJFA(476)][$_CJFA(643)](Bt),
+            n[$_CJEl(614)] = $_BCw(),
+            n[$_CJFA(665)] = b ? 3 : 0,
+            n[$_CJEl(667)] = b ? $_CJFA(607) : $_CJEl(600),
+            n[$_CJFA(69)][$_CJEl(155)] = {
+                "\u0024\u005f\u0042\u0043\u0077": n[$_CJFA(665)]
+            };
+            $_DBFEk = QBLnx.$_Db()[3][17];
+            break;
+        }
+    }
+}
 
 ne['prototype'] = {
 // ne[$_CJFA(230)] = {
@@ -487,3 +558,5 @@ ne['prototype'] = {
         };
     }
 }
+
+// console.log(ne['prototype']['$_CCDH']);

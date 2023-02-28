@@ -5,9 +5,9 @@ from a_my.utils import ut
 
 # 有些参数不用传， 换个分页参数就行
 t = {
-    # 'params': {'brand': 'free', 'device': 'iphone', 'country': 'cn', 'genre': '36'}, // ok
+    # 'params': {'brand': 'free', 'device': 'iphone', 'country': 'cn', 'genre': '36'}, # ok
     # 'params': {'brand': 'free', 'device': 'iphone', 'country': 'cn', 'genre': '36',
-    #            'date': '2023-02-24', 'page': 2, 'is_rank_index': 1, 'snapshot': '14:48:04'},  // ok
+    #            'date': '2023-02-24', 'page': 2, 'is_rank_index': 1, 'snapshot': '14:48:04'},  # ok
     'params': {'brand': 'free', 'device': 'iphone', 'country': 'cn', 'genre': '36', 'page': 3},  # ok
     'url': '/rank/index',
     'baseURL': 'https://api.qimai.cn'

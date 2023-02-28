@@ -12,7 +12,7 @@
     - gt: 019924a82c70bb123aae90d483087f94
     - callback: geetest_1677144357843
 响应：
-    - 一堆js文件地址
+    - 一堆js文件地址，包含了重要js文件 slide.js
 
 3，https://apiv6.geetest.com/get.php
 载荷：
@@ -24,11 +24,13 @@
     - w: m7HnCD5ziwUYIxSq8W)hZiT0vo(bxv(ILy5JAdmXhvlqmdF0KWB1XTdxStWxg(BJHJgn13OxeeYxnn10Ar(KsajG)KcZ13rHxIk6S8EBar2F1AJJhV36MVDFzPdsFC6yiYuVHFlxq0D90kX86MEQzb8sBGlBw5iz5SaeS1nGuak19V9pVo8zka7HEyM6ik29xiQOzvuwchFflldwTSU)y6bFkaw0CU1ge(e2sK)giqyadeoxLWH3PTI8I2SqwQTKMVGl2o(jRgOOK56Ax4CdArZoSw5Or73Q77lOlWOP9PWEKWZrThCW4DgP7)BY(6dFgRr9)kSq7YxGvPGokWyN1JpZeDSZRoN7h0kiT5Ku4b(VZumDaK(O1RYeIJEh91OHBhilbsVW6uwRiEG(7OTiOs)WlGSSL9bUxeQ1xgNnkjfa6ViofU19KSBGCdTInzWsi5hr(Omw)CAj(rTzO4JEsp(SM8pAsdwnmJ9wsbR8MLrZyORjzeElO66KL5O(kSy1td6M29RYzs(jlstMyIOMEytNqiZ()pDerymtJsdE8A)CJ5Xu5kU9GozdFEMUMjuiF0cXxj5EfeRcvpLXdxHEFMe0RU)Elrgx3w8v(QHRjqg(rfeZ9u3V61Ij2AIssJ3wl)YMM81e4oWxwNGo4NcMUcNjLancPkuJ34Rs6emhSm8KEEhatJrPB6G(NssOkPdcNdJM0RMfH2cmemuqbXuG7qC6SJlyp225sdb8NyWL)aI1Lon7Zaf63kv31OH(0lUZC11(bnyGIuuTQ9O)NsydzZ7LdMW14tqT2fodEPMlTgDxqXMwWilf7bNJpH2mNXK99hxUrY1lJzqTqXw6PrDlqnERKdFMrpnJ4kczo2Ww5qdC4ATrdmwVyyzAHMAvoondYJEIoXXMNy3NgScgMY6Q))(mq6SXszmIhByjdGwDYHIyakfgrtLWRtRkvikm4vSux0FbExppZEl9teUqJwpy3TiwmR2Yc)WDsapRxNLxQIMeTkQm)pGjm0BNcrVfOsTNH6Z(9kb9CHW9Mrg9MfzRFiNubgredxQqPr5mp8k(Xf52UC)N4G3PCzkU6lzE5XHW0v(qmY(kB7c1L)m3EhTbO3Uc30soJ1gt752HMpRZzax9iKMl4CAaycuvNoMTqI)QSOgThRojRWwZ3f2JLxTlVRfR2UIVsTNsCCXZjv(YDNRKrJpgl2tWRx8f7yK65yY3qakGOplL6YvtlvmsMirHprQJMicsvvDy0fxnVNINAcBqteqEBm4JCmAsRj6zmRGCk9pMqkXJQEKxm2pacVWmPR3qNS0qKwfpaSXJHs)6B57G0XX74SEnMSS0h1s(RG1Jl)5kcKf9xHcUDuHJ9X6sgTqHel9y9VBYUPX59mMumG1wDXNcYeEr8(d0G9xWjq2T)9WlRFxDryhgUbeyuegZpe7WeyHtETu41TLCXAP5zJsQlijRov0)mpiJE1AJOI6pVul)GR87HIFc8ZAFuWyteeUtv0kc4jJomlToroB1ahFpWyDdwc2ju1l9J9k(qn2qxdGeOPXHLYxvldRUil6qSRo14(BBQ(2ShggsdzSGbO4eFzGJPD0L0X5TaALyhduMMT97fm2TP62A68hXeZSl1KkExYKQxYxv4mkrVJznAVA8J24t63Z6CdM08yESGpbu0m57yBKUPltwziCOdaRtNTEtfAO1f69fKID))4R69tddkBCWsixVBjfWqp1xGxioxD9UGYYsIaWBn6eGp)ZczBiNV65OXjhTqS0G8ww77qoAsCUAKzEvuiCcd3HYA9dS0foRiS0Bbh9st55pGtgszIQpVD8SpUACnXxdHFGs3J78q9c0r6riCP9JRsTH07p)3vSm4Rr(pMn02jKLMhnuxzEjj41Qd422dr5Fq3eASrlzIXV64WBEzn0OAjU0cPh63bECvVRvmXr26WkgQ5qvsWvq0EnVAAMQa4W9RukHMOhtFrw(ZwJPC47x678an3gjtUO(zdkpzDOqjLotCBmwgZ1fjtoa81De521cgQOJxw6IbxhvDKtVGBSeYciFZ71Bqo1XHNaIWcpg()0uruQ4owQFICKnPYWbsHEQRjs8oP5BpfKvh2Vm9I5CZq25HxESFmee610m8DX2TuFb978VgDALjLxacY8kWSsRCKyth4uhRIB1Tsh52HCECvjfNZAV7xy(XigTOP3voLi(zEbaq1rZFMmlLRloL9WdQTBXz9CYMBuuKGkvj5Rz1aQNXFURQX9PlEQKhtZQXo7Ccl6qGg..76c08ec51c964e2dcc2401da7a11140dd157309893b93abf65d326576bdbc3ea418c999777865aa55f92bbeb94bea4672f70c581b67593b38974339780efe834ce7fd7c68da528e0c4489668e3a758b842ac12ddb2bef1a7fe9a805c83412c7be4f106165a1e92d72cde8f689b39a5d5d2df4614595900a93033becc97b6018a
     - callback: geetest_1677144364405
 响应：
-    一堆数据，有图片域名："static.geetest.com"
+    - 返回一堆数据，js破解需要用到
+    - 有图片域名："static.geetest.com"
 
 ============ 点击验证，弹出验证码，有以下两个请求 ==================
 4，https://api.geetest.com/ajax.php
 - 用于请求生成验证码；
+- 这步之后会加载 前面请求返回的slide.js文件
 载荷：
     - gt: 019924a82c70bb123aae90d483087f94
     - challenge: e778330cd54877beac432673d841eac5
@@ -57,6 +59,8 @@
     - callback: geetest_1677144465538
 响应：一堆地址
     - 包含验证码图片地址，包括 背景原图，缺口图，滑块图
+    - 返回一个新的 challenge，在原challenge后加了两个字符
+
 
 ============== 拖动滑块验证 ==================================
 6，https://api.geetest.com/ajax.php
@@ -75,9 +79,25 @@
 
 ===============================================================================================================
 重点分析 请求6：
-破解 w 参数：w = h + u
+破解 w 参数：w = h + u;
+w被unicode编码了，可以搜索 "\u0077"
 
 
 
 
+================================ js 分析 =======================================================================
+var u = r[$_CAIAt(754)]()
+  , l = V[$_CAIAt(353)](gt[$_CAIAt(218)](o), r[$_CAIAt(756)]())
+  , h = m[$_CAIAt(782)](l)
+  , f = {
+    "\u0067\u0074": i[$_CAIAt(104)],
+    "\u0063\u0068\u0061\u006c\u006c\u0065\u006e\u0067\u0065": i[$_CAHJd(182)],
+    "\u006c\u0061\u006e\u0067": o[$_CAIAt(116)],
+    "\u0024\u005f\u0042\u0043\u0077": r[$_CAHJd(665)],
+    "\u0063\u006c\u0069\u0065\u006e\u0074\u005f\u0074\u0079\u0070\u0065": r[$_CAIAt(667)],
+    "\u0077": h + u
+};
+
+目标位置： h + u
+需要破解：u, l, h
 """

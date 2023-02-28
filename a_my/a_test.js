@@ -49,24 +49,15 @@ var CryptoJS = require('crypto-js');
 // e_data = encodeURI('1676722853381000');
 // console.log(e_data);
 
-// d = {
-//     a:1,
-//     b:function () {
-//         console.log(this);
-//         return this.c
-//     },
-//     c:22
-// }
-// // console.log(d);
-// console.log(d.b());
 
-function o(n) {
-    t = '',
-    // [f2, s2, d2, m2, l2, v2, p2, s2, l2, d2, h2, y2][M](function(n) {
-    ['66', '72', '6f', '6d', '43', '68', '61', '72', '43', '6f', '64', '65']['forEach'](function(n) {
-        t += unescape("%u00" + n)
-    });
-    var t, e = t;
-    return String[e](n)
-}
-o('0x36cnfreeiphone')
+// a = Date()
+// console.log(Date.now());
+
+// gt: "019924a82c70bb123aae90d483087f94"
+// challenge: "39a3cababad371a8fa9c8eeb1143ba29"
+//
+// gt: "019924a82c70bb123aae90d483087f94"
+// callback: "geetest_1677553412363"
+//
+// gt: "019924a82c70bb123aae90d483087f94"
+// challenge: "39a3cababad371a8fa9c8eeb1143ba29"
