@@ -1,11 +1,21 @@
+""" 通过破解js来过滑块验证码 """
+
 import json
 import re
 import time
 
+import execjs
 import requests
 import ddddocr
 
-from a_my.A0013_极验_过滑块.handle import restore_img, slide_track
+from a_code.A013_极验_过滑块.handle import restore_img, slide_track
+from a_code.utils.ut import compile_js
+
+# import subprocess
+# from functools import partial
+# # 修改编码方式，windows 默认编码是gbk，Mac 和 Linux 默认是utf-8
+# subprocess.Popen = partial(subprocess.Popen, encoding='utf-8')
+# TODO: 备注问题：这里需要修改 c:\python38\lib\subprocess.py 文件 __init__方法参数： encoding='utf-8'
 
 
 # ======================== 1. 初次进入极验滑动网址， 有以下请求 ================================================
@@ -155,21 +165,26 @@ def get_slide_track(distance):
 
 
 # =========================== 6. 模拟滑动行为,请求获取 validate 响应参数 =======================================================
-def get_validate():
+def get_validate(guiji, res5):
     """获取滑块验证成功返回的 validate """
+    exe = compile_js('slide-js全扣.js')
+    w = exe.call('get_w', guiji, res5)
     url = 'https://api.geetest.com/ajax.php'
     headers = {
         "User-Agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Mobile Safari/537.36"
     }
     params = {
-        "gt": "019924a82c70bb123aae90d483087f94",
-        "challenge": "e778330cd54877beac432673d841eac5dp",
+        "gt": res5['gt'],
+        "challenge": res5['challenge'],
         "lang": "zh-cn",
         "$_BCw": "3",
         "client_type": "web_mobile",
-        "w": "lv4NEf2D0pezssjBTCIzjP(WJt7(xt1Y4fGfHXl4xWjzso7lD3GEapj5mvfUzLW)c1UvRl5SFDVdfD1JayYqI4Pqw7deqpkbGHLrQyUyhyKF5bBnhzf)OGlox95ZkVEQpwjSY1XPx6AbDD76ibGweLWSyzXTfTOiw9sfNOfjjNe0Pnn)Sa3WYHV8Boy5QZzeNJPiAk(q85)RQ)2snYNPpFAG2jsT)25TN00wt1Lt482)HbaKKBVq5h8GXFlWAGXucXOOvX(wsL9XGcKuoMUOE8RrpBCMwvDUglKP13PpI3XKhsOdIBGvbn(MWBlk)DKBIaI2en1RvVvSckxZou3QOADdvHhPy85i9Sl38aycpGvAJiBWc5v8K0NQ5wbUpzbjBWU2qUPyOTp8ogYmvR5nXPvkyUALgFg5AomzzLYveQTFPOXWZuzNkDzBUccSYgS140t)P7TaniZEl)w8ooUoNIbz6eclGHShdYfxoqsnb2vlY7ZuaPZZUayrbPh2mHAmARqGQ(jDYbLFM4Shal6JrCeRlWgfpSnJyAaQYQzx5emr37089oOueNc01lPhYac9rKj(8a9CiGoj8IIyP7e)a4x1ruFUcwBIU2i02ibmUH56yfZYf)DIFVsh1hjUlpGutmoUtZnRpgqoELyHUtXNGzMaQQjv)DXYmUlagJj6zo)v8yiLkKUUtw5ZoXoGnXRhguAsrcW09)vr0tbfYYEROLps46a9BNIqwtLA9qby5TZYP(PgXMVsxYdYFqNNtr2NwgtW762KY)XchzPybIa0ddRmmInW1(YsAQ3PBDUl2jzTxuI4MHaZvsJUPXULYjqLw)wLb2G7n7324UWIjbG0kCTMOjXknECDe0FXRHKFhfX8i884itvKDB3NYjjJLOpa9957d9e6c163121948cdf2fc04e52161912c5a116ae03cd9194a204c9b4be9afcfab4a12098a9af931640d61121f93868f2b3d65dd8b95e0c588c04f9b9e2c342724c57e77c3aabcd54f08f48132fc284d8728bfb59d4385071d7e193c45ea3546163fc1f60050c17439993570c6b8a52af361000dfd3bbc2704b76666ef9938",
+        # "w": "lv4NEf2D0pezssjBTCIzjP(WJt7(xt1Y4fGfHXl4xWjzso7lD3GEapj5mvfUzLW)c1UvRl5SFDVdfD1JayYqI4Pqw7deqpkbGHLrQyUyhyKF5bBnhzf)OGlox95ZkVEQpwjSY1XPx6AbDD76ibGweLWSyzXTfTOiw9sfNOfjjNe0Pnn)Sa3WYHV8Boy5QZzeNJPiAk(q85)RQ)2snYNPpFAG2jsT)25TN00wt1Lt482)HbaKKBVq5h8GXFlWAGXucXOOvX(wsL9XGcKuoMUOE8RrpBCMwvDUglKP13PpI3XKhsOdIBGvbn(MWBlk)DKBIaI2en1RvVvSckxZou3QOADdvHhPy85i9Sl38aycpGvAJiBWc5v8K0NQ5wbUpzbjBWU2qUPyOTp8ogYmvR5nXPvkyUALgFg5AomzzLYveQTFPOXWZuzNkDzBUccSYgS140t)P7TaniZEl)w8ooUoNIbz6eclGHShdYfxoqsnb2vlY7ZuaPZZUayrbPh2mHAmARqGQ(jDYbLFM4Shal6JrCeRlWgfpSnJyAaQYQzx5emr37089oOueNc01lPhYac9rKj(8a9CiGoj8IIyP7e)a4x1ruFUcwBIU2i02ibmUH56yfZYf)DIFVsh1hjUlpGutmoUtZnRpgqoELyHUtXNGzMaQQjv)DXYmUlagJj6zo)v8yiLkKUUtw5ZoXoGnXRhguAsrcW09)vr0tbfYYEROLps46a9BNIqwtLA9qby5TZYP(PgXMVsxYdYFqNNtr2NwgtW762KY)XchzPybIa0ddRmmInW1(YsAQ3PBDUl2jzTxuI4MHaZvsJUPXULYjqLw)wLb2G7n7324UWIjbG0kCTMOjXknECDe0FXRHKFhfX8i884itvKDB3NYjjJLOpa9957d9e6c163121948cdf2fc04e52161912c5a116ae03cd9194a204c9b4be9afcfab4a12098a9af931640d61121f93868f2b3d65dd8b95e0c588c04f9b9e2c342724c57e77c3aabcd54f08f48132fc284d8728bfb59d4385071d7e193c45ea3546163fc1f60050c17439993570c6b8a52af361000dfd3bbc2704b76666ef9938",
+        "w": w,
         "callback": "geetest_1677144493094"
     }
+    resp = requests.get(url, params=params, headers=headers)
+    return resp.text
 
 
 if __name__ == '__main__':
@@ -182,6 +197,8 @@ if __name__ == '__main__':
     pos_x = read_img(bg, full_bg)
     track = get_slide_track(pos_x)
     print(track)
-
-
+    # track = []
+    # res5 = {'a': 1}
+    res6 = get_validate(track, res5)
+    print(res6)
 
