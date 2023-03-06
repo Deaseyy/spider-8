@@ -15,6 +15,8 @@ windows 默认编码是gbk，Mac 和 Linux 默认是utf-8
 解决：
     - 修改 c:\python38\lib\subprocess.py 文件，找到一个包含形参`encoding=None`的__init__方法， 改为 'utf-8' .
 """
+import time
+from urllib.parse import quote
 
 import execjs
 
@@ -30,4 +32,35 @@ def compile_js(path):
 # res = exe.call('f', 'params')
 
 
+def format_query_params(params, sort=True, blank=True, urlencode=False):
+    """字典参数格式化
+    - sort: True-字典排序
+    - blank: True-保留值为空串的键值对
+    - urlencode: True-进行url编码，安全字符 '/,&,='
+    """
+    keys = list(params)
+    if sort:
+        keys.sort()
 
+    if blank:
+        buff = [f'{k}={params[k]}' for k in keys]
+    else:
+        buff = [f'{k}={params[k]}' for k in keys if params[k]]
+
+    res = "&".join(buff)
+    if urlencode:
+        res = quote(res, safe='/,&,=')
+
+    return res
+
+
+def ctime(ms=True):
+    """当前时间戳"""
+    t = time.time()
+    if ms:
+        return int(t * 1000)
+    return int(t)
+
+
+if __name__ == '__main__':
+    print(ctime())

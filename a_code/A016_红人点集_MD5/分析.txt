@@ -1,0 +1,5 @@
+目标：模拟登录，获取token
+目标网址：https://www.hh1024.com/#/login
+
+分析：
+分析js可得，参数都是标准MD5加密

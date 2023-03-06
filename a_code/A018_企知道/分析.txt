@@ -1,0 +1,8 @@
+目标网站：
+    - url: https://www.qizhidao.com/check?searchKey=%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD&tagNum=1&fromRoutePage=check
+目标：获取人工智能相关公司列表
+
+网站分析：
+ - 获取数据需要登陆；
+ - 未登录，只能获取第一页数据
+

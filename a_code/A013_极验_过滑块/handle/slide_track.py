@@ -1,19 +1,13 @@
 """ 模拟生成滑动轨迹 """
 
-
-# -*- coding: utf-8 -*-
 import random
 
 
-def __ease_out_expo(x):
-    if x == 1:
+def __ease_out_expo(sep):
+    if sep == 1:
         return 1
     else:
-        return 1 - pow(2, -10 * x)
-
-
-def __ease_out_quart(x):
-    return 1 - pow(1 - x, 4)
+        return 1 - pow(2, -10 * sep)
 
 
 def get_slide_track(distance):
@@ -30,7 +24,8 @@ def get_slide_track(distance):
         raise ValueError(f"distance类型必须是大于等于0的整数: distance: {distance}, type: {type(distance)}")
     # 初始化轨迹列表
     slide_track = [
-        [random.randint(20, 60), random.randint(10, 40), 0]
+        [random.randint(-50, -10), random.randint(-50, -10), 0],
+        [0, 0, 0],
     ]
     # 共记录count次滑块位置信息
     count = 30 + int(distance / 2)
@@ -43,15 +38,19 @@ def get_slide_track(distance):
         # 已滑动的横向距离
         x = round(__ease_out_expo(i / count) * distance)
         # 滑动过程消耗的时间
-        t = random.randint(10, 20)
+        t += random.randint(10, 20)
         if x == _x:
             continue
-        slide_track.append([x - _x, _y, t])
+        slide_track.append([x, _y, t])
         _x = x
-    slide_track.append([0, 0, random.randint(200, 300)])
+    slide_track.append(slide_track[-1])
     return slide_track
 
 
+
 if __name__ == '__main__':
-    for _ in get_slide_track(100):
+    distance = 100
+    # 方式1
+    for _ in get_slide_track(distance):
         print(_)
+

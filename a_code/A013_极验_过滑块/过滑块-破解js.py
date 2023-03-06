@@ -161,7 +161,10 @@ def read_img(bg, full_bg):
 
 # =========================== 5. 模拟生成滑动轨迹 =======================================================
 def get_slide_track(distance):
-    return slide_track.get_slide_track(distance)
+    # track = slide_track.get_slide_track(distance)
+    track = slide_track.get_slide_track(distance)
+    print('track:', track)
+    return track
 
 
 # =========================== 6. 模拟滑动行为,请求获取 validate 响应参数 =======================================================
@@ -169,6 +172,7 @@ def get_validate(guiji, res5):
     """获取滑块验证成功返回的 validate """
     exe = compile_js('slide-js全扣.js')
     w = exe.call('get_w', guiji, res5)
+    print('w: ', w)
     url = 'https://api.geetest.com/ajax.php'
     headers = {
         "User-Agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Mobile Safari/537.36"
@@ -196,9 +200,6 @@ if __name__ == '__main__':
     full_bg, bg = parse_bg_captcha(res5)
     pos_x = read_img(bg, full_bg)
     track = get_slide_track(pos_x)
-    print(track)
-    # track = []
-    # res5 = {'a': 1}
     res6 = get_validate(track, res5)
     print(res6)
 

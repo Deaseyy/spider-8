@@ -10,14 +10,14 @@
 //     return e;
 // }
 
-'$_CCDH': function(t) {
-    var $_CBFJo = QBLnx.$_CM
-      , $_CBFId = ['$_CBGCG'].concat($_CBFJo)
-      , $_CBGAZ = $_CBFId[1];
-    $_CBFId.shift();
-    var $_CBGBn = $_CBFId[0];
-    var e = new U()['encrypt'](this['$_CCEc'](t));
-    while (!e || 256 !== e['length'])
-        e = new U()['encrypt'](this['$_CCEc'](!0));
-    return e;
-}
+// '$_CCDH': function(t) {
+//     var $_CBFJo = QBLnx.$_CM
+//       , $_CBFId = ['$_CBGCG'].concat($_CBFJo)
+//       , $_CBGAZ = $_CBFId[1];
+//     $_CBFId.shift();
+//     var $_CBGBn = $_CBFId[0];
+//     var e = new U()['encrypt'](this['$_CCEc'](t));
+//     while (!e || 256 !== e['length'])
+//         e = new U()['encrypt'](this['$_CCEc'](!0));
+//     return e;
+// }
