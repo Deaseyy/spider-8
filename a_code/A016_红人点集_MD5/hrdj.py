@@ -2,7 +2,7 @@ import hashlib
 
 import requests
 
-from a_code.utils.ut import compile_js, ctime
+from utils.ut import compile_js, ctime
 
 
 def login(phone, pwd):

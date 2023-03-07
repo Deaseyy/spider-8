@@ -2,7 +2,7 @@ import hmac
 
 import requests
 
-from a_code.utils.ut import format_query_params, ctime
+from utils.ut import format_query_params, ctime
 
 
 def get_data():

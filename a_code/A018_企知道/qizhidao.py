@@ -1,6 +1,6 @@
 import requests
 
-from a_code.utils.ut import compile_js
+from utils.ut import compile_js
 
 
 def get_data():

@@ -1,7 +1,6 @@
 import requests
 
-from a_code.utils import ut
-
+from utils import ut
 
 # 有些参数不用传， 换个分页参数就行
 t = {

@@ -4,12 +4,11 @@ import json
 import re
 import time
 
-import execjs
 import requests
 import ddddocr
 
 from a_code.A013_极验_过滑块.handle import restore_img, slide_track
-from a_code.utils.ut import compile_js
+from utils.ut import compile_js
 
 # import subprocess
 # from functools import partial
