@@ -2,6 +2,7 @@
   "dependencies": {
     "canvas": "^2.11.0",
     "crypto-js": "^4.1.1",
-    "jsdom": "^21.1.0"
+    "jsdom": "^21.1.0",
+    "jsencrypt": "^3.3.2"
   }
 }

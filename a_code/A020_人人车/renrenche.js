@@ -55,5 +55,5 @@ function get_acw_sc__v2(arg1){
 }
 console.log(get_acw_sc__v2(arg1));
 
-// '0318C68516AA4E5E8E0AD3F721F00B7F5B42E5EB'  // arg1
-// '640749656182df39227feff6ddf25288ab90bdd7'  // arg2
+// '66A9E0B930CCFD54091F4927713C0DA04F4A0C82'  // arg1
+// "6407530c039f4394791988aae40204b9292cf3bf"  // arg2
