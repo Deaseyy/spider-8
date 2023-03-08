@@ -1,0 +1,13 @@
+网站：https://36kr.com/
+登录接口：https://gateway.36kr.com/api/mus/login/byMobilePassword
+
+分析：
+- webpack打包的，可扣webpack 模块
+    - 加载器 和 模块 是分离在不同js文件，需先扣出加载器
+        可通过已触发的加载器代码行，如n(10)， 点n进去就是加载器
+        拷贝出包含加载器的 整个webpack 结构
+        再通过 n.m(下标) 找到需要的模块，放入 webpack 结构中
+        全局导出加载器函数，再进行调用
+
+
+- 也可使用算法包模拟
