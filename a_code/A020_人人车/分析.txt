@@ -1,0 +1,29 @@
+反爬方式：
+    - cookie反爬虫，acw_tc, acw_sc__v2
+    - 字体反爬虫
+
+分析：
+- 谷歌浏览器若打开控制台，刷新url，或者点击下一页会跳转到另一个域名下；
+- 若缺少部分请求头，则请求回来的html是跳转的另一个域名下的html数据；
+
+
+# 字体地址位置
+@font-face {
+    font-family: "rrc-font-defender";
+    src: url('https://misc.rrcimg.com/ttf/rrcttfae51ad7ed4891ae96258796b3026807d.eot');
+    src:
+        url('https://misc.rrcimg.com/ttf/rrcttfae51ad7ed4891ae96258796b3026807d.eot?#iefix') format('embedded-opentype'),
+        url('https://misc.rrcimg.com/ttf/rrcttfae51ad7ed4891ae96258796b3026807d.woff') format('woff'),
+        url('https://misc.rrcimg.com/ttf/rrcttfae51ad7ed4891ae96258796b3026807d.ttf') format('truetype'),
+        url('https://misc.rrcimg.com/ttf/rrcttfae51ad7ed4891ae96258796b3026807d.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+
+正常：2019 03
+源码：1029 04
+
+遗留问题：
+    未过验证码，请求中途老是弹出验证码
+

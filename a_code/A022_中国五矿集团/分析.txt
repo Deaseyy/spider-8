@@ -1,0 +1,12 @@
+目标：https://ec.minmetals.com.cn/open/home/purchase-info?tabIndex=1
+
+分析：
+- public接口返回了一个MIG开头的字符串，可以猜测是公钥（RSA 1024位的密钥一般就是MIG开头）
+- 直接分析数据接口，难以找到加密位置
+    - 可以搜索 setPublicKey
+    - 也可从返回公钥的那个接口入手调试，因为既然是加密，肯定会使用公钥
+
+破解：
+- 可以直接使用标准 RSA加密算法包
+- 扣 webpack 模块
+
